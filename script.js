@@ -55,10 +55,10 @@ function displayForecast(response) {
                 <div class="weather-forecast-temperatures">
                   <span class="weather-forecast-temperature-max"> ${Math.round(
                     forecastDay.temp.max
-                  )}º </span>
+                  )}ºC </span>
                   <span class="weather-forecast-temperature-min"> ${Math.round(
                     forecastDay.temp.min
-                  )}º </span>
+                  )}ºC </span>
                 </div>
               </div>
             `;
