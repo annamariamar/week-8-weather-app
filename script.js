@@ -70,7 +70,6 @@ function displayForecast(response) {
 }
 
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKey = "3fc240078f798a71d42f3a58e52319fb";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&unit=metric`;
   axios.get(apiUrl).then(displayForecast);
@@ -116,5 +115,13 @@ function handleSubmit(event) {
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+var now = new Date();
+var hours = now.getHours();
+if (hours > 07 && hours < 19) {
+  document.write('<body style="background-color: white">');
+} else {
+  document.write('<body style="background-color: black; color: white">');
+}
 
 search("New York");
